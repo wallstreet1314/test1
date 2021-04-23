@@ -2,16 +2,12 @@ class ReDict(dict):
     def __init__(self):
         super(ReDict, self).__init__()
 
-    def __getattr__(self, item):
-        str1 = str(item)
-        try:
-            return self[str1]
-        except:
-            print('NO such name')
-
     def __getattribute__(self, item):
-        str1 = str(item)
-        return self[str1]
+        str_ = str(item)
+        try:
+            return self[str_]
+        except:
+            return 'no such name'
 
     def __setattr__(self, key, value):
         str1 = str(key)
@@ -23,3 +19,4 @@ person_data.name = '老王'
 person_data.age = 27
 person_data.dream = 'a great law man'
 print(person_data)
+print(person_data.hight)
