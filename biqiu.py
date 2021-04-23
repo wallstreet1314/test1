@@ -18,8 +18,8 @@ class ReDict(dict):
         self[str1] = value
 
 
-re_dict = ReDict()
-re_dict.name = '老王'
-re_dict.age = 27
-re_dict.dream = 'a great law man'
-print(re_dict)
+person_data = ReDict()
+person_data.name = '老王'
+person_data.age = 27
+person_data.dream = 'a great law man'
+print(person_data)
